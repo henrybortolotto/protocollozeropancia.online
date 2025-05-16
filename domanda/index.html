@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("fundo.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #f7ce6a;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+    .black h1 {
+      color: black;
+    }
+    .black p {
+      font-size: 18px;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+
+      <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2954538718048408');
+      fbq('track', 'AddToCart');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2954538718048408&ev=AddToCart&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+</head>
+<body> 
+  <div class="container">
+    <div class="black">
+      <div id="primeira">
+        <div class="question">
+
+          <h1>Domanda 1</h1>
+
+          <p>Vuoi davvero scoprire questo segreto?</p>
+
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="segunda()">SÌ</button>
+          <button class="btn" onclick="segunda()">NO</button>
+        </div>
+      </div>
+      <div id="segunda" class="hide">
+        <div class="question">
+
+          <h1>Domanda 2</h1>
+
+          <p>Prometti di non rivelarlo a nessuno?</p>
+
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="terceira()">SÌ</button>
+          <button class="btn" onclick="terceira()">NO</button>
+        </div>
+      </div>
+      <div id="terceira" class="hide">
+        <div class="question">
+
+          <h1>Domanda 3</h1>
+
+          <p>Il video seguente ha un limite per pochissime persone che possono vederlo contemporaneamente... Hai intenzione di guardarlo fino alla fine?</p>
+
+        </div>
+        <div class="answer">
+          <button class="btn" onclick="redirect()">SÌ</button>
+          <button class="btn" onclick="redirect()">NO</button>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align: center; font-weight: bold;">© 2024 – Tutti i diritti riservati. Questo sito non fa parte né è approvato da Facebook. Facebook è un marchio registrato di Facebook, Inc.</p>
+    <p style="text-align: center; font-weight: bold;"><a href="https://protocolozero-barriga.live/termos" style="color: black;">Termini di Utilizzo</a> | <a href="https://protocolozero-barriga.live/privacidade" style="color: black;">Politica sulla Privacy</a></p>
+  </div>
+
+  <script>
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+    function redirect() {
+      location.href = "https://protocollozeropancia.online" // LINK AQUI
+    }
+  </script>
+</body>
+</html>
